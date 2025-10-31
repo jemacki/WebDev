@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="en-NZ">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Cart</title> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body class="cart-page">
+    <nav class="main-nav">
+        <div class="sandwich-icon-area">
+            <p onclick="openNav()"> &#9776; <span></span> </p>
+        </div>
+        <div class="nav-title">
+            <p>Mac Alterixx</p>
+        </div>
+    </nav>
+
+
+<Main Class="cart-layout">
+
+
+  <aside Class="cart-sidebar">
+    <h2>Your Cart:</h2>
+    <button class="cart-btn pay-btn" id="payBtn">Pay & Continue</button>
+
+    <button class="cart-btn cancel-btn" id="cancelBtn">Cancel</button>
+  </aside>
+
+
+  <section class="cart-display">
+
+    <div class="cart-header">
+      <p>Item</p>
+      <p>Price</p>
+      <p>Quantity</p>
+    </div>
+
+    <Div id="cartItems"></div>
+    <p id="cartTotal" class="cart-total"></p>
+
+  </section>
+
+</main>
+
+<Script src="cart.js"></script>
+</body>
+</html>

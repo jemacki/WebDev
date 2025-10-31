@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="contact-page">
+  <nav class="main-nav">
+      <div class="sandwich-icon-area"><p onclick="openNav()">&#9776;</p></div>
+      <div class="nav-title"><p>Contact me</p></div>
+  </nav>
+
+  <main>
+    <form id="contactForm" class="contact-form">
+      <h2>Send Me A Message</h2>
+
+      <input type="text" id="nameInput" placeholder="Your Name" required>
+      <input type="email" id="emailInput" placeholder="Your Email" required>
+      <textarea id="messageInput" rows="5" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+      <p id="statusMsg" style="display:none;"></p>
+      <a href="index.html" class="return-home-btn">Return Home</a>
+    </form>
+  </main>
+  <script type="module" src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<script src="catalogue.js"></script>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body id="product-page">
+    <div id="Catalogue-page">
+
+    <nav class="main-nav">
+        <div class="sandwich-icon-area">
+            <p onclick="openNav()"> &#9776; <span></span> </p>
+        </div>
+        <div class="nav-title">
+            <p>Mac Alterixx</p>
+        </div>
+    </nav>
+
+    <div id="AccNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">HOME</a>
+            <a href="contact-us.html">CONTACT US</a>
+            <a href="account.html">ACCOUNT</a>
+            <a href="cart.html">CART</a>
+        </div>
+    </div>
+    
+
+    <script>
+
+        function openNav() {
+            document.getElementById("AccNav").style.display = "flex";
+        }
+
+        function closeNav() {
+            document.getElementById("AccNav").style.display = "none";
+        }
+    </script>
+
+<main class="product-layout">
+<div class="product-left">
+    <h1 id="productTitle"></h1>
+    <img id="productImage" class="product-image" alt="">
+    <div class="product-actions">
+        <button class="add-to-cart">Add to cart.</button>
+        <p id="productPrice"></p>
+    </div>
+    
+</div>
+<div class="product-right">
+    <p id="productDescription" class="product-description"></p>
+    <a class="back-link" href="catalogue.html">Return to Catalogue</a>
+
+</div>
+</main>
+
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = parseInt(urlParams.get("id"));
+  const product = items.find(item => item.id === id);
+
+
+  if (product) {
+    document.getElementById("productTitle").innerText = product.title;
+    document.getElementById("productDescription").innerText = product.description;
+    document.getElementById("productPrice").innerText = " $" + product.price;
+    document.getElementById("productImage").src = product.image_url;
+    document.getElementById("productImage").alt = product.title;
+    document.title = product.title + " / Mac Alterixx";
+} else {
+    document.getElementById("productTitle").innerText = "Product not found.";
+  }
+    const addToCartBtn = document.querySelector(".add-to-cart");
+
+  addToCartBtn.addEventListener("click", () => {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let existingItem = cart.find(item => item.id === product.id);
+
+    if (existingItem) {
+      existingItem.quantity += 1; 
+    } else {
+      cart.push({...product, quantity: 1}); 
+    }
+
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+
+    addToCartBtn.innerText = "Added!!!!";
+    setTimeout(() => {
+      window.location.href = "cart.html";
+    }, 1200);
+  });
+</script>
+</script>
+
+
+
+</body>
+</html>

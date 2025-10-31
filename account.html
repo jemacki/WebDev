@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Account</title> 
+    <link rel="stylesheet" Type="text/css" href="styles.css">
+</head>
+
+
+
+
+<!------------------------------BODY------------------------------------------------>
+<body id="account-page">
+
+    <nav class="main-nav">
+        <div class="sandwich-icon-area">
+            <p onclick="openNav()"> &#9776; <span></span> </p>
+        </div>
+        <div class="nav-title">
+            <p>Mac Alterixx</p>
+        </div>
+    </nav>
+
+    <div id="AccNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">HOME</a>
+            <a href="contact-us.html">CONTACT US</a>
+            <a href="account.html">ACCOUNT</a>
+            <a href="cart.html">CART</a>
+        </div>
+    </div>
+
+    <script>
+
+        function openNav() {
+            document.getElementById("AccNav").style.Display = "flex";
+        }
+
+
+        function closeNav() {
+            document.getElementById("AccNav").style.display = "none";
+        }
+    </script>
+
+<h1>Login to account</h1>
+
+<div class="login-container">
+  <h2>~Login Container~</h2>
+
+  <form id="loginForm">
+    <input type="email" id="emailInput" placeholder="Email"
+           required
+           oninvalid="this.setCustomValidity('Please enter a valid email (example@example.com)')"
+           oninput="this.setCustomValidity('')">
+
+    <input type="password" id="passwordInput" placeholder="Password" required>
+
+    <button Type="submit">Log in</button>
+  </form>
+
+    <p id="loginError" style="display: none; color: red; font-weight: bold; text-align:center;">
+    Invalid login details.
+  </p>
+    <p id="loginSuccess" style="display: none; color: rgb(77, 255, 0); font-weight: bold; text-align:center;">
+        Login successful!
+  </p>
+</div>
+
+<a href="index.html" Class="return-home-btn">Return Home</a>
+
+<script src="account.js"></Script>
+</body>
+</html>
+    

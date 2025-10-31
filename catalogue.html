@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Catalogue</title> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+
+
+
+<!------------------------------BODY------------------------------------------------>
+<body id="Catalogue-page">
+
+    <nav class="main-nav">
+        <div class="sandwich-icon-area">
+            <p onclick="openNav()"> &#9776; <span></span> </p>
+        </div>
+        <div class="nav-title">
+            <p>Mac Alterixx</p>
+        </div>
+    </nav>
+
+    <div id="AccNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">HOME</a>
+            <a href="contact-us.html">CONTACT US</a>
+            <a href="account.html">ACCOUNT</a>
+            <a href="cart.html">CART</a>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("AccNav").style.display = "flex";
+        }
+
+        function closeNav() {
+            document.getElementById("AccNav").style.display = "none";
+        }
+    </script>
+
+<h1>Our Collective of our <a href='https://imsfurniture.com/'>Friends</a> products.</h1>
+
+
+<main id="catalogue-main">
+  <div id="itemList" class="catalogue-grid"></div>
+</main>
+
+
+
+
+<script src="catalogue.js"></script>
+</body>
+</html>

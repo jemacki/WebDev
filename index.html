@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <html lang="en-NZ">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Home</title> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body class="index-page">
+
+ 
+    <nav class="main-nav">
+        <div class="sandwich-icon-area">
+            <p onclick="openNav()"> &#9776; <span></span> </p>
+        </div>
+        <div class="nav-title">
+            <p>Mac Alterixx</p>
+        </div>
+    </nav>
+
+    <div id="myNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">HOME</a>
+            <a href="contact-us.html">CONTACT US</a>
+            <a href="account.html">ACCOUNT</a>
+            <a href="cart.html">CART</a>
+        </div>
+    </div>
+
+    <script>
+        
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+	
+
+    <header>
+
+        <div class="bg-gif"></div>
+
+        <div class="bg-text">
+            <h1 style="font-size: 2em">Welcome To Mac Alterixx</h1>
+            <p>SS26, <a href='https://imsfurniture.com/'>IMS.</a></p>
+        </div>
+    </header>
+    
+
+    <Main>
+        <div class="catalogue-container">
+            <a href="catalogue.html">
+                <button id="CatalogueBtn">View Catalogue</button>
+            </A>
+        </div>
+    </main>
+
+
+    <footer class="vertical-center"> 
+        
+        <p>About <a href="about-us.html" id="footerLink">Mac Alterixx</a><br> Find out more </p>       
+    </footer>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
